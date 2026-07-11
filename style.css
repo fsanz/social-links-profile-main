@@ -26,7 +26,7 @@ html {
 }
 
 :root {
-	font-size: 62.5%;
+	font-size: 10px;
 	--GREEN: hsl(75, 94%, 57%);
 	--WHITE: hsl(0, 0%, 100%);
 	--GRAY: hsl(0, 0%, 65%);
