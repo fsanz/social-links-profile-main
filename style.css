@@ -1,0 +1,127 @@
+/* Box sizing rules */
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 62.5%;
+	--GREEN: hsl(75, 94%, 57%);
+	--WHITE: hsl(0, 0%, 100%);
+	--GRAY: hsl(0, 0%, 65%);
+	--GREY-700: hsl(0, 0%, 20%);
+	--GREY-800: hsl(0, 0%, 12%);
+	--GREY-900: hsl(0, 0%, 8%);
+}
+
+body {
+    background-color: var(--GREY-900);
+	min-height: 100vh;
+    padding: 2rem;
+	place-content: center;
+}
+
+.social-links {
+	align-items: center;
+	background-color: var(--GREY-800);
+	border-radius: 1.5rem;
+	display: flex;
+	flex-direction: column;
+    font-family: "Inter", sans-serif;
+	font-size: 1.4rem;
+	gap: 2.6rem;
+    margin: auto;
+	padding: 2.5rem;
+	width: min(100%,33rem);
+}
+
+.social-links__avatar-container {
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	height: 8.8rem;
+	overflow: hidden;
+	width: 8.8rem;
+}
+
+.social-links__avatar {
+	aspect-ratio: 1/1;
+    height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.social-links__header {
+	align-items: center;
+	display: flex;
+	gap: 0.5rem;
+	flex-direction: column;
+    line-height: 1.4;
+}
+
+.social-links__name {
+	color: var(--WHITE);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.social-links__location {
+	color: var(--GREEN);
+    font-weight: 600;
+}
+
+.social-links__description {
+	color: var(--GRAY);
+    font-weight: 400;
+}
+
+.social-links__wrapper {
+    display: grid;
+    gap: 1.4rem;
+    width: 100%;
+}
+
+.social-links__link {
+    text-align: center;
+    background-color: var(--GREY-700);
+    border-radius: 0.8rem;
+    color: var(--WHITE);
+    display: block;
+    font-weight: 600;
+    padding: 1.5rem 0;
+}
+
+.social-links__link:hover {
+	background-color: var(--GREEN);
+	color: var(--GREY-900);
+	cursor: pointer;
+    transition: background-color 1000ms;
+}
+
+@media screen and (min-width: 375px) {
+	.social-links {
+		padding: 4rem;
+		gap: 2.6rem;
+		width: min(100%,38rem);
+	}
+}
